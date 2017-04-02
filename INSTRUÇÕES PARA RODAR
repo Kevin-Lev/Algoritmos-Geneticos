@@ -1,0 +1,27 @@
+Instruções para compilar o cóDIGO
+
+
+Estas instruções estão sendo encaminhadas em conjunto com os testes requisitados para análise no algoritmo genético.Após o download do arquivo compactado, extraia-o para o local desejado.Em seguida:
+
+
+1)Abra o terminal do Linux
+
+2)Vá até o diretório em que o arquivo foi salvo.
+
+3)Insira o seguinte comando no terminal para a execução do arquivo(sem as aspas): "g++ caixeiro_viajante.cpp && ./a.out"
+
+4)Caso deseje mudar os parâmetros da simulação, na linha 375 do arquivo "caixeiro_viajante.cpp" estão as variáveis "tampopulação"(que recebe um tamanho desejado para a população) e "maxgeracoes" que recebe um valor para definir o máximo de gerações criadas.
+
+5)Na linha 250, substitua o primeiro parâmetro da função fopen() pelo nome do caso que deseja testar no algoritmo genético.por exemplo:
+
+ para testar o caso rl5934, a função fopen deve ficar dessa forma:
+
+   fopen("rl5934", "r"); 
+
+Na linha 305, encontra-se a chamada da função principal do programa :
+
+cout << AG(ind1, ind2, 1, num_vertice, maxgeracoes, vet_populacao, tampopulacao) << endl;
+
+ela irá retornar a solução do individuo gerado com o menor fitness, de acordo com os parâmetros que foram inseridos. Para alterar a taxa de mutação do algoritmo genético, vá até o terceiro argumento da função acima (onde está o número "1") e substitua o valor atual pelo valor desejado.
+
+6)Alguns casos podem levar algum tempo para processar, portanto é necessário aguardar um certo tempo.
